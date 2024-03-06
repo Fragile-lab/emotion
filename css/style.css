@@ -202,28 +202,10 @@ body {
   font-weight: 600;
   transition: all 0.5s ease;
   cursor: pointer;
-  position: relative;
-  transform: translateZ(0);
-}
-.header__link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #ff0a3b;
-  opacity: 0;
-  transform: translate(0, -5px);
-  transition: all 300ms ease-out;
 }
 .header__link:hover {
   color: white;
-}
-.header__link:hover::after {
-  background-color: white;
-  opacity: 1;
-  transform: translate(0, 1px);
+  letter-spacing: 1px;
 }
 
 /* <> медиа запросы */

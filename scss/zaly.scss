@@ -106,34 +106,13 @@ body {
         font-weight: 600;
         transition: all 0.5s ease;
         cursor: pointer;
-        position: relative;
-        transform: translateZ(0);
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #ff0a3b;
-            opacity: 0;
-            transform: translate(0, -5px);
-            transition: all 300ms ease-out;
-
-        }
 
         &:hover {
             color: white;
             letter-spacing: 1px;
-            &::after {
-                background-color: white;
-                opacity: 1;
-                transform: translate(0, 1px);
-            }
         }
     }
-    }
+}
 
 /* <> медиа запросы */
 @media (max-width: 768px) {
@@ -258,7 +237,7 @@ body {
         font-weight: bold;
         line-height: 85px;
         letter-spacing: 2px;
-        transition: all 0.15s ease;
+        transition: all 0.3s ease;
         text-transform: uppercase;
         white-space: nowrap;
 
@@ -270,7 +249,7 @@ body {
             border: 2px solid #ff0a3b;
             left: 8px;
             top: 8px;
-            transition: all 0.15s ease;
+            transition: all 0.3s ease;
         }
 
         &:hover {
@@ -314,8 +293,8 @@ body {
     &__feedback {
         color: #E74C3A;
         cursor: pointer;
-        height: 20px;
         position: relative;
+        display: inline-block;
         transform: translateZ(0);
 
         &::after {
@@ -356,6 +335,7 @@ body {
         color: #E74C3A;
         cursor: pointer;
         position: relative;
+        display: inline-block;
 
         &::after {
             content: '';
@@ -374,7 +354,7 @@ body {
         &:hover {
             &::after {
                 opacity: 1;
-                transform: translate(0, 1px);
+                transform: translate(0, 2px);
             }
         }
     }
@@ -408,6 +388,7 @@ body {
             font-weight: 600;
             cursor: pointer;
             position: relative;
+            display: inline-block;
 
             &::after {
                 content: '';
@@ -431,6 +412,15 @@ body {
             }
         }
     }
+}
+
+.frame4 {
+    font-size: 20px;
+    font-family: Montserrat;
+    color: white;
+    max-width: 1140px;
+    margin: 60px auto 0 auto;
+    padding: 0 15px;
 }
 
 /* <> MEDIA MIDDLE */
