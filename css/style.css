@@ -121,16 +121,16 @@ body {
 }
 *::-moz-selection {
   color: #fff;
-  background: #e74c3c;
+  background: #e74c3a;
 }
 *::selection {
   color: #fff;
-  background: #e74c3c;
+  background: #e74c3a;
 }
 
 *::-moz-selection {
   color: #fff;
-  background: #e74c3c;
+  background: #e74c3a;
 }
 
 .wrapper {
@@ -138,6 +138,7 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   box-shadow: 0 0 30px black;
+  overflow: hidden;
 }
 
 /* <> TOP */
@@ -160,10 +161,10 @@ body {
   background-color: #333333;
   z-index: 2;
 }
-.header .container {
-  max-width: 1120px;
+.header > .container {
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 15px;
   height: 100px;
 }
 .header__body {
@@ -200,7 +201,7 @@ body {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 600;
-  transition: all 0.5s ease;
+  transition: letter-spacing 0.5s ease, color 0.5s ease;
   cursor: pointer;
 }
 .header__link:hover {
@@ -212,9 +213,6 @@ body {
 @media (max-width: 768px) {
   .header:before {
     background-color: #191919;
-  }
-  .header__body {
-    height: 80px;
   }
   .header__logo {
     flex: 0 0 180px;
@@ -283,12 +281,25 @@ body {
     margin: 0 0 25px 0;
     padding: 5px;
   }
+  .header__link {
+    font-size: 20px;
+  }
+}
+@media (max-width: 835px) {
+  .header__link {
+    font-size: 17px;
+  }
 }
 /* <\> MEDIA TOP */
 /* <\> TOP */
 /* <> MIDDLE */
 .content {
   padding: 110px 0 0 0;
+}
+.content > .container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .frame1 {
@@ -300,14 +311,8 @@ body {
 }
 
 .frame2 {
-  max-width: 1590px;
-  margin: 30px auto 0 auto;
+  margin-top: 30px;
   color: #E74C3A;
-}
-.frame2__info {
-  padding: 0 26px;
-  max-width: 1109px;
-  margin: 0 auto;
 }
 .frame2__info-title {
   color: white;
@@ -330,54 +335,65 @@ body {
 }
 
 .frame3 {
-  max-width: 1109px;
-  margin: 30px auto 0 auto;
-  position: relative;
+  margin-top: 30px;
 }
 .frame3__button {
   background-color: #E74C3A;
-  width: 178px;
-  height: 39px;
   position: relative;
-  z-index: 3;
-}
-.frame3__button > a {
+  transform: translate(0, 0);
+  display: inline-block;
+  padding: 12px 21px;
   color: white;
   font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
   cursor: pointer;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
 }
-.frame3__tip {
-  color: white;
-  font-size: 17px;
+.frame3__button::after {
+  content: "Нажав на кнопку Вы можете почитать другие отзывы или написать свой!";
   position: absolute;
-  z-index: 2;
-  top: 11px;
-  left: -20%;
-  transform: scaleX(0);
-  transition: all 0.5s ease-out;
-}
-.frame3__tip.open {
-  left: 20%;
-  transform: scale(1);
+  font-size: 17px;
+  text-transform: none;
+  pointer-events: none;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  transition: opacity 500ms ease-in, transform 350ms ease-out;
 }
 
 /* <> MEDIA MIDDLE */
+@media (min-width: 768px) {
+  .frame3__button::after {
+    transform: translate(160px, 10px);
+    opacity: 0;
+  }
+  .frame3__button.open::after {
+    font-weight: 400;
+    width: 610px;
+    opacity: 1;
+    transform: translate(220px, 10px);
+  }
+}
 @media (max-width: 768px) {
   .content {
     padding: 110px 0 0 0;
+  }
+  .frame3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .frame3__button::after {
+    max-width: 540px;
+    opacity: 1;
+    transform: translate(0, 50px);
   }
 }
 /* <\> MEDIA MIDDLE */
 /* <\> MIDDLE */
 /* <> BOTTOM */
 .footer {
-  margin: 15px 0 0 0;
+  margin-top: 15px;
   width: 100%;
   height: 100px;
   background-color: #555555;
@@ -385,11 +401,11 @@ body {
   align-items: center;
 }
 .footer > .container {
-  max-width: 1120px;
+  max-width: 1140px;
   width: 100%;
   height: 35px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
 }
@@ -433,5 +449,10 @@ body {
 }
 
 /* <> MEDIA BOTTOM */
+@media (max-width: 768px) {
+  .footer {
+    margin: 100px 0 0 0;
+  }
+}
 /* <\> MEDIA BOTTOM */
 /* <\> BOTTOM */
