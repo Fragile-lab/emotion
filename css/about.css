@@ -290,8 +290,8 @@ body {
     font-size: 17px;
   }
 }
-/* <\> MEDIA TOP */
-/* <\> TOP */
+/* </> MEDIA TOP */
+/* </> TOP */
 /* <> MIDDLE */
 .content {
   padding: 110px 0 0 0;
@@ -392,8 +392,8 @@ body {
     padding: 110px 0 0 0;
   }
 }
-/* <\> MEDIA MIDDLE */
-/* <\> MIDDLE */
+/* </> MEDIA MIDDLE */
+/* </> MIDDLE */
 /* <> BOTTOM */
 .footer {
   margin-top: 15px;
@@ -457,5 +457,5 @@ body {
     margin: 100px 0 0 0;
   }
 }
-/* <\> MEDIA BOTTOM */
-/* <\> BOTTOM */
+/* </> MEDIA BOTTOM */
+/* </> BOTTOM */
