@@ -14,10 +14,10 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 2,
         autoplay: true,
-        autoplaySpeed: 6000,
+        autoplaySpeed: 5000,
         speed: 1000,
         easing: 'ease-in-out',
-        pauseOnFocus: true,
+        pauseOnFocus: false,
         pauseOnHover: false,
         pauseOnDotsHover: false,
         responsive: [

@@ -141,6 +141,17 @@ body {
   overflow: hidden;
 }
 
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.black {
+  background-color: #242424;
+  padding: 30px 0;
+}
+
 .marker {
   width: 70px;
   height: 10px;
@@ -168,9 +179,6 @@ body {
   z-index: 2;
 }
 .header > .container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 15px;
   height: 100px;
 }
 .header__body {
@@ -185,6 +193,9 @@ body {
   flex: 0 0 180px;
   position: relative;
   z-index: 3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .header__logo img {
   max-width: 100%;
@@ -201,6 +212,9 @@ body {
 }
 .header__list li {
   margin: 0 0 0 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .header__link {
   color: #ff0a3b;
@@ -306,16 +320,14 @@ body {
 .content {
   padding: 110px 0 0 0;
 }
-.content > .container {
-  max-width: 1140px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
 
 .frame1 {
   position: relative;
   width: 426px;
   margin: 15px auto 0 auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .frame1__border {
   height: 115px;
@@ -477,13 +489,14 @@ body {
 }
 .frame3__agreement a:hover::after {
   opacity: 1;
-  transform: translate(0, 1px);
+  transform: translate(0, 0);
 }
 
 .frame4 {
   margin-top: 60px;
   width: 100%;
   color: #fff;
+  padding-bottom: 30px;
   /*<>SLIDER*/
   /*</>SLIDER*/
 }
@@ -539,7 +552,10 @@ body {
   opacity: 1;
 }
 .frame4__slider .slider__item {
-  margin: 10px 5px 0 0;
+  margin: 0 5px 10px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .frame4__slider .slider .slick-list {
   overflow: hidden;
@@ -547,6 +563,16 @@ body {
 .frame4__slider .slider .slick-track {
   display: flex;
   align-items: flex-start;
+}
+.frame4__slider .slider .slick-slide {
+  transition: opacity 0.5s;
+  opacity: 0.2;
+}
+.frame4__slider .slider .slick-active {
+  opacity: 1;
+}
+.frame4__slider .slider .slick-cloned {
+  opacity: 1;
 }
 .frame4__slider .slider .slick-dots {
   display: flex;
@@ -566,6 +592,29 @@ body {
   height: 10px;
   background-color: #7F7F7F;
   border-radius: 50%;
+}
+
+.frame5 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.frame5__infoblock {
+  color: white;
+}
+.frame5__title {
+  margin-top: 30px;
+  font-family: "montserrat";
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+.frame5__info {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 20px;
 }
 
 /* <> MEDIA MIDDLE */
@@ -654,11 +703,8 @@ body {
   align-items: center;
 }
 .footer > .container {
-  max-width: 1140px;
-  width: 100%;
   height: 35px;
-  margin: 0 auto;
-  padding: 0 15px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
