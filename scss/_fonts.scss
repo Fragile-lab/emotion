@@ -2,28 +2,28 @@
 @font-face {
     font-family: Montserrat;
     src: url(fonts/montserrat/Montserrat-Bold.ttf);
-    src: local('Montserrat'), url(fonts/montserrat/Montserrat-Bold.ttf) format('woff2');
+    src: local(Montserrat), url(fonts/montserrat/Montserrat-Bold.ttf) format('woff2');
     font-weight: 700;
     font-style: bold;
 }
 @font-face {
-    font-family: 'open-sans';
+    font-family: open-sans;
     src: url(fonts/open-sans/OpenSans-Regular.ttf);
-    src: local('open-sans'), url(fonts/open-sans/OpenSans-Regular.ttf) format('woff2');
+    src: local(open-sans), url(fonts/open-sans/OpenSans-Regular.ttf) format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
-    font-family: 'open-sans';
+    font-family: open-sans;
     src: url(fonts/open-sans/OpenSans-SemiBold.ttf);
-    src: local('open-sans'), url(fonts/open-sans/OpenSans-SemiBold.ttf) format('woff2');
+    src: local(open-sans), url(fonts/open-sans/OpenSans-SemiBold.ttf) format('woff2');
     font-weight: 600;
     font-style: semibold;
 }
 @font-face {
-    font-family: 'open-sans';
+    font-family: open-sans;
     src: url(fonts/open-sans/OpenSans-Bold.ttf);
-    src: local('open-sans'), url(fonts/open-sans/OpenSans-Bold.ttf) format('woff2');
+    src: local(open-sans), url(fonts/open-sans/OpenSans-Bold.ttf) format('woff2');
     font-weight: 800;
     font-style: bold;
 }
