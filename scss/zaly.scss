@@ -80,7 +80,7 @@ body {
     }
 
     &__body {
-        height: 100px;
+        height: 100%;
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -131,6 +131,11 @@ body {
 }
 
 /* <> медиа запросы */
+@media (max-width: 1200px) {
+    .header>.container {
+        height: 80px;
+    }
+}
 @media (min-width: 768px) {
     .header__link {
         &:hover {
@@ -574,38 +579,39 @@ body {
 }
 
 .frame5 {
-    display: flex; //сделать @медиа блок
+    display: flex; //display block @media
     justify-content: space-between;
-    position: relative;
-
-    //leftside
-    &__infoblock {
-        color: white;
-    }
-
-    &__title {
-        margin-top: 30px;
-        font-family: 'montserrat';
-        font-size: 24px;
-        font-weight: 700;
-        text-transform: uppercase;
-        line-height: 1.4;
-    }
-
-    &__info {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.6;
-        margin-top: 20px;
-    }
-
-    //rightside
-    
-
+    color: #fff;
+    &__sensual {
+        max-width: 475px;
+        width: 100%;
+        padding-right: 15px;
+        }
+        &__img {
+            width: 100%;
+            & img {
+                width: 100%;
+            }
+        }
+        &__title {
+            font-family: Montserrat;
+            font-size: 24.5px;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+        &__subtitle {
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+        
 }
 
 /* <> MEDIA MIDDLE */
+
 @media (min-width: 1200px) {
+    .content {
+        padding-top: 90px;
+    }
     .frame4__image {
         width: 355px;
     }

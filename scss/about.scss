@@ -21,12 +21,12 @@ body {
 
 *::selection {
     color: #fff;
-    background: #e74c3a;
+    background: #e74c3A;
 }
 
 *::-moz-selection {
     color: #fff;
-    background: #e74c3a;
+    background: #e74c3A;
 }
 
 .wrapper {
@@ -35,6 +35,23 @@ body {
     margin: 0 auto;
     box-shadow: 0 0 30px black;
     overflow: hidden;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.black {
+    background-color: #242424;
+    padding: 30px 0;
+}
+
+.marker {
+    width: 70px;
+    height: 10px;
+    background-color: #E74C3A;
 }
 
 /* <> TOP */
@@ -59,14 +76,11 @@ body {
     }
 
     &>.container {
-        max-width: 1140px;
-        margin: 0 auto;
-        padding: 0 15px;
         height: 100px;
     }
 
     &__body {
-        height: 100px;
+        height: 100%;
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -78,6 +92,7 @@ body {
         flex: 0 0 180px;
         position: relative;
         z-index: 3;
+        user-select: none;
 
         & img {
             max-width: 100%;
@@ -97,6 +112,7 @@ body {
 
         & li {
             margin: 0 0 0 16px;
+            user-select: none;
         }
     }
 
@@ -110,16 +126,30 @@ body {
 
         &:hover {
             color: white;
-            letter-spacing: 1px;
         }
     }
 }
 
 /* <> медиа запросы */
+@media (max-width: 1200px) {
+    .header>.container {
+        height: 80px;
+    }
+}
+@media (min-width: 768px) {
+    .header__link {
+        &:hover {
+            letter-spacing: 1px;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .header:before {
         background-color: #191919;
     }
+
+
 
     .header__logo {
         flex: 0 0 180px;
@@ -201,13 +231,15 @@ body {
             padding: 5px;
         }
     }
+
     .header__link {
-        font-size: 20px;
+        font-size: 21px;
     }
 }
-@media (max-width: 835px) {
+
+@media (max-width: 860px) {
     .header__link {
-        font-size: 17px;
+        font-size: 16.9px;
     }
 }
 
@@ -323,6 +355,11 @@ body {
 }
 
 /* <> MEDIA MIDDLE */
+@media (max-width: 1200px) {
+    .content {
+        padding-top: 90px;
+    }
+}
 @media (max-width: 768px) {
     .content {
         padding: 110px 0 0 0;

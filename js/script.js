@@ -6,6 +6,12 @@ $(document).ready(function () {
     $('.frame3__button').hover(function (e) {
         $('.frame3__button').addClass('open');
     });
+    $('.frame5__price11').click(function (e) {
+        $('.frame5__info11').toggleClass('open');
+    });
+    $('.frame5__price12').click(function (e) {
+        $('.frame5__info12').toggleClass('open');
+    });
     $('.slider').slick({
         arrows: false,
         dots: true,
