@@ -20,7 +20,7 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 2,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 50000,
         speed: 1000,
         easing: 'ease-in-out',
         pauseOnFocus: false,

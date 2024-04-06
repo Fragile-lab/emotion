@@ -631,6 +631,8 @@ body {
   .content {
     padding-top: 90px;
   }
+}
+@media (min-width: 1200px) {
   .frame4__image {
     width: 355px;
   }
