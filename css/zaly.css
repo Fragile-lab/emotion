@@ -179,7 +179,7 @@ body {
   z-index: 2;
 }
 .header > .container {
-  height: 100px;
+  height: 90px;
 }
 .header__body {
   height: 100%;
@@ -323,7 +323,7 @@ body {
 /* </> TOP */
 /* <> MIDDLE */
 .content {
-  padding: 110px 0 0 0;
+  padding: 100px 0 0 0;
 }
 
 .frame1 {
@@ -489,12 +489,12 @@ body {
   height: 1px;
   background-color: #E74C3A;
   opacity: 0;
-  transform: translate(0, -5px);
+  transform: translate(0, -7px);
   transition: opacity 300ms ease-out, transform 300ms ease-out;
 }
 .frame3__agreement a:hover::after {
   opacity: 1;
-  transform: translate(0, 0);
+  transform: translate(0, -4px);
 }
 
 .frame4 {
@@ -605,7 +605,7 @@ body {
   color: #fff;
 }
 .frame5__sensual {
-  max-width: 475px;
+  max-width: 460px;
   width: 100%;
   padding-right: 15px;
 }
@@ -620,10 +620,79 @@ body {
   font-size: 24.5px;
   line-height: 1.4;
   text-transform: uppercase;
+  margin-top: 30px;
 }
 .frame5__subtitle {
   margin-top: 20px;
-  line-height: 1.4;
+  line-height: 1.6;
+}
+.frame5__accordion {
+  padding-left: 15px;
+  width: 100%;
+  max-width: 650px;
+}
+
+.accordion__name {
+  width: 100%;
+  pointer-events: none;
+}
+.accordion__red:hover {
+  color: #ff0a3b;
+}
+.accordion__black:hover {
+  color: #000;
+}
+.accordion__br {
+  display: none;
+}
+
+dl {
+  margin-top: 20px;
+}
+dl.mt0 {
+  margin-top: 0;
+}
+
+dt {
+  font-family: Montserrat;
+  border-bottom: 2px solid #E74C3A;
+  padding: 15px 15px 15px 0;
+  display: flex;
+  align-items: center;
+  font-size: 17.5px;
+  line-height: 2;
+  color: #6e6e6e;
+  transition: color 0.3s ease-out;
+  cursor: pointer;
+}
+dt.active > .fas {
+  rotate: 90deg;
+}
+
+dd {
+  font-family: Open-Sans;
+  color: #6e6e6e;
+  font-size: 14px;
+  padding-top: 20px;
+  line-height: 1.6;
+}
+
+.far {
+  font-size: 22px;
+  font-weight: 400;
+  color: #ff0a3b;
+  margin-right: 20px;
+  pointer-events: none;
+}
+
+.fas {
+  font-size: 20px;
+  font-weight: 900;
+  color: #E74C3A;
+  rotate: 0deg;
+  justify-items: end;
+  transition: rotate 0.5s ease;
+  pointer-events: none;
 }
 
 /* <> MEDIA MIDDLE */
@@ -654,6 +723,30 @@ body {
     width: 335px;
   }
   .frame4__row {
+    display: block;
+  }
+  .frame5 {
+    display: block;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .frame5__sensual {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .frame5__accordion {
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+@media (max-width: 520px) {
+  .accordion__br.br1 {
+    display: block;
+  }
+}
+@media (max-width: 380px) {
+  .accordion__br.br2 {
     display: block;
   }
 }

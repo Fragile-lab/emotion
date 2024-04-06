@@ -76,7 +76,7 @@ body {
     }
 
     &>.container {
-        height: 100px;
+        height: 90px;
     }
 
     &__body {
@@ -249,7 +249,7 @@ body {
 
 /* <> MIDDLE */
 .content {
-    padding: 110px 0 0 0;
+    padding: 100px 0 0 0;
     &>.container {
         max-width: 1140px;
         padding: 0 15px;
@@ -360,12 +360,6 @@ body {
         padding-top: 90px;
     }
 }
-@media (max-width: 768px) {
-    .content {
-        padding: 110px 0 0 0;
-    }
-}
-
 /* </> MEDIA MIDDLE */
 /* </> MIDDLE */
 

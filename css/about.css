@@ -179,7 +179,7 @@ body {
   z-index: 2;
 }
 .header > .container {
-  height: 100px;
+  height: 90px;
 }
 .header__body {
   height: 100%;
@@ -323,7 +323,7 @@ body {
 /* </> TOP */
 /* <> MIDDLE */
 .content {
-  padding: 110px 0 0 0;
+  padding: 100px 0 0 0;
 }
 .content > .container {
   max-width: 1140px;
@@ -419,11 +419,6 @@ body {
 @media (max-width: 1200px) {
   .content {
     padding-top: 90px;
-  }
-}
-@media (max-width: 768px) {
-  .content {
-    padding: 110px 0 0 0;
   }
 }
 /* </> MEDIA MIDDLE */

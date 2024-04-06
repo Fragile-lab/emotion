@@ -12,6 +12,10 @@ $(document).ready(function () {
     $('.frame5__price12').click(function (e) {
         $('.frame5__info12').toggleClass('open');
     });
+    $(".accordion dd").hide().prev().click(function() {
+        $(this).parents(".accordion").find("dd").not(this).slideUp().prev().removeClass("active");
+        $(this).next().not(":visible").slideDown().prev().addClass("active");
+    });
     $('.slider').slick({
         arrows: false,
         dots: true,
@@ -20,7 +24,7 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 2,
         autoplay: true,
-        autoplaySpeed: 50000,
+        autoplaySpeed: 5000,
         speed: 1000,
         easing: 'ease-in-out',
         pauseOnFocus: false,
