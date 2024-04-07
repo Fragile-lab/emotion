@@ -6,12 +6,6 @@ $(document).ready(function () {
     $('.frame3__button').hover(function (e) {
         $('.frame3__button').addClass('open');
     });
-    $('.frame5__price11').click(function (e) {
-        $('.frame5__info11').toggleClass('open');
-    });
-    $('.frame5__price12').click(function (e) {
-        $('.frame5__info12').toggleClass('open');
-    });
     $(".accordion dd").hide().prev().click(function() {
         $(this).parents(".accordion").find("dd").not(this).slideUp().prev().removeClass("active");
         $(this).next().not(":visible").slideDown().prev().addClass("active");
