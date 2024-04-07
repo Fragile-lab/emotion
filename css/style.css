@@ -392,6 +392,9 @@ body {
   .content {
     padding-top: 90px;
   }
+  .container {
+    max-width: 960px;
+  }
 }
 @media (min-width: 768px) {
   .frame3__button::after {
