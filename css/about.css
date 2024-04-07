@@ -77,13 +77,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* fonts */
 @font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/montserrat/Montserrat-Bold.ttf");
-  src: local("Montserrat"), url("../fonts/montserrat/Montserrat-Bold.ttf") format("woff2");
-  font-weight: 700;
-  font-style: bold;
-}
-@font-face {
   font-family: "open-sans";
   src: url(fonts/open-sans/OpenSans-Regular.ttf);
   src: local("open-sans"), url("../fonts/open-sans/OpenSans-Regular.ttf") format("woff2");
