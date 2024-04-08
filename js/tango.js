@@ -26,9 +26,14 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 4,
     autoplay: false,
-    speed: 1000,
+    speed: 500,
     easing: 'ease-in-out',
     responsive: [
+      {
+        breakpoint: 1090, settings: {
+          slidesToShow: 3,
+        }
+      },
       {
         breakpoint: 768, settings: {
           slidesToShow: 2,

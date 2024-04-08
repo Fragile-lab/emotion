@@ -11,6 +11,7 @@ body {
     background-color: #333333;
     color: #ff0a3b;
     font-family: "open-sans";
+    scroll-behavior:smooth;
 }
 
 @media (max-width: 768px) {
@@ -257,7 +258,12 @@ body {
     }
 }
 
-
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
 .frame1 {
     position: relative;
     width: 339px;
@@ -392,18 +398,21 @@ body {
 }
 .frame3 {
     max-width: 1500px;
-    margin: 30px auto 30px auto;
+    margin: 30px auto 0px auto;
     padding: 0 15px;
     &__image {
         width: 100%;
+        pointer-events: none;
     }
     &__text {
         color: #fff;
         font-size: 20px;
-        font-weight: 800;
+        font-weight: 700;
         text-transform: uppercase;
         text-align: left;
         margin: 20px 20px 0 20px;
+        pointer-events: none;
+        font-family: "Montserrat";
     }
     &__square {
         display: block;
@@ -413,27 +422,81 @@ body {
         width: 20px;
         height: 20px;
         background-color: #E74C3A;
+        pointer-events: none;
+        transition: all 0.3s ease-out;
     }
+    /*<FRAME3__SLIDER>*/
     & .slider {
         min-width: 0;
         &__item {
-            margin: 0 10px;
+            cursor: pointer;
+            margin: 0 7px;
             width: 100%;
             position: relative;
             display: block;
             background-color: #000;
             padding-bottom: 60px;
             user-select: none;
+            transition: all 0.3s ease-out;
+            &:hover {
+                background-color: #E74C3A;
+                .frame3__square {
+                    background-color: #fff;
+                }
+            }
     }
     }
 }
 .slick-track {
     display: flex;
-    align-items: flex-start;
 }
 .slick-list {
     overflow: hidden;
 }
+/*</> FRAME3__SLIDER*/
+
+.frame4 {
+    margin-top: 60px;
+    font-family: "Open-Sans";
+    text-align: center;
+    &__title {
+        font-size: 28px;
+        font-family: "Montserrat";
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #e53935;
+    }
+    &__items {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        color: #fff;
+        max-width: 275px;
+        padding: 0 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        & img {
+            width: 100%;
+        }
+        &-day {
+            margin-top: 30px;
+            font-size: 17.5px;
+            font-weight: 700;
+            font-family: "Montserrat";
+        }
+        &-level {
+            margin-top: 20px;
+            color: #e53935;
+        }
+        &-time {
+            margin-top: 20px;
+        }
+    }
+}
+
+
 
 
 /* <> MEDIA MIDDLE */
@@ -474,6 +537,23 @@ body {
             text-align: center;
         }
     }
+}
+@media (max-width: 768px) {
+    .frame4__items {
+        display:block;
+        margin: 60px auto 0 auto;
+    }
+    .frame4__item {
+        max-width: 510px;
+        margin: 0 auto 40px auto;
+        padding: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.frame5 {
+    color: pink;
 }
 /* </> MIDDLE */
 
