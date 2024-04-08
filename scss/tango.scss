@@ -7,11 +7,11 @@
 html,
 body {
     min-width: 320px;
-    height: 100%;
     background-color: #333333;
     color: #ff0a3b;
     font-family: "open-sans";
     scroll-behavior:smooth;
+    position: relative;
 }
 
 @media (max-width: 768px) {
@@ -62,7 +62,7 @@ body {
     max-width: 1920px;
     margin: 0 auto;
     top: 0;
-    z-index: 50;
+    z-index: 5;
     border-bottom: 1px solid #DDDDDD;
 
     &:before {
@@ -495,9 +495,60 @@ body {
         }
     }
 }
+.frame5 {}
 
-
-
+.layout { // toggle open, body overflow hidden, margins, more inputs, create api, fix js
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a1;
+    z-index: 6;
+    display: flex;
+    justify-content: right;
+    color: #fff;
+}
+.form {
+    max-width: 510px;
+    padding: 15px 31px;
+    &__title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 800;
+    }
+    &__text {
+        font-size: 15px;
+    }
+    &__inputbox {
+        position: relative;
+        &::after {
+            pointer-events: none;
+            content: 'Имя';
+            position: absolute;
+            font-size: 16px;
+            top: calc(50% - 8px);
+            left: 20px;
+        }
+        &.active::after {
+            transform:translateY(-10px);
+        }
+    }
+    &__input {
+        width: 100%;
+        height: 52px;
+        padding: 20px 10px 5px 19px;
+        border-radius: 4px;
+        background-color: #E74C3C;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        &:focus {
+            background-color: inherit;
+            border: 1px solid #fff;
+        }
+    }
+}
 
 /* <> MEDIA MIDDLE */
 @media (max-width: 1200px) {
@@ -551,9 +602,6 @@ body {
             margin-bottom: 0;
         }
     }
-}
-.frame5 {
-    color: pink;
 }
 /* </> MIDDLE */
 
