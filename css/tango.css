@@ -152,6 +152,11 @@ body {
   background-color: #E74C3A;
 }
 
+.identif {
+  font-size: 0;
+  opacity: 0;
+}
+
 /* <> TOP */
 .header {
   position: fixed;
@@ -568,7 +573,7 @@ body {
 }
 
 .frame5 {
-  margin-top: 80px;
+  margin-top: 100px;
   text-align: center;
   color: #fff;
 }
@@ -651,6 +656,7 @@ body {
 .frame6__daybox {
   width: 33.3333%;
   color: #fff;
+  position: relative;
 }
 .frame6__daybox-title {
   padding: 30px 30px 0 30px;
@@ -665,6 +671,11 @@ body {
   font-size: 14px;
   margin-top: 20px;
   padding: 0 30px 160px 30px;
+}
+.frame6__daybox-text .identif {
+  position: absolute;
+  right: 0;
+  bottom: 80px;
 }
 .frame6__daybox img {
   width: 100%;
@@ -703,6 +714,66 @@ body {
   width: 270px;
   height: 1px;
   background-color: #fff;
+}
+
+.frame7 {
+  padding: 0 60px;
+  margin-top: 30px;
+}
+.frame7__title {
+  font-size: 28px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #E74C3A;
+  text-align: center;
+}
+.frame7__agree {
+  text-align: center;
+  font-size: 22px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #fff;
+  margin: 20px 0 40px 0;
+  position: relative;
+}
+.frame7__agree::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #E74C3A;
+}
+.frame7__number-list {
+  padding: 0 15px;
+}
+.frame7__dot-list {
+  margin: 10px 0;
+}
+.frame7__dot-list li p {
+  display: block;
+  margin-left: 15px;
+}
+.frame7__dot-list li {
+  position: relative;
+}
+.frame7__dot-list li::before {
+  position: absolute;
+  left: 0;
+  top: 8.195px;
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #cccccc;
+}
+.frame7__number-list, .frame7__dot-list {
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 /* <> MEDIA MIDDLE */
