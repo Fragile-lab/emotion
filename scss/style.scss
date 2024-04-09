@@ -376,8 +376,7 @@ body {
                     opacity: 1;
                     transform: translate(0, 50px);
                 }
-            
-        }
+        }   
     }
 }
 
@@ -463,3 +462,12 @@ body {
 
 /* </> MEDIA BOTTOM */
 /* </> BOTTOM */
+
+/* show when scroll */
+.element-animation {
+    opacity: 0;
+    &.element-show {
+        opacity: 1;
+        transition: opacity 1s, transform 1s;
+    }
+}

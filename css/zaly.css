@@ -498,6 +498,12 @@ body {
   /*<>SLIDER*/
   /*</>SLIDER*/
 }
+.frame4__infobox.element-animation {
+  transform: translateX(-100px);
+}
+.frame4__infobox.element-animation.element-show {
+  transform: translateX(0);
+}
 .frame4__title {
   font-size: 20px;
   font-family: "Montserrat";
@@ -524,6 +530,12 @@ body {
   min-width: 0;
   max-width: 760px;
   padding: 0 15px;
+}
+.frame4__slider.element-animation {
+  transform: translateX(100px);
+}
+.frame4__slider.element-animation.element-show {
+  transform: translateX(0);
 }
 .frame4__slider .slider {
   min-width: 0;
@@ -625,6 +637,12 @@ body {
   padding-left: 15px;
   width: 100%;
   max-width: 650px;
+}
+.frame5__accordion.element-animation {
+  transform: translateY(60px);
+}
+.frame5__accordion.element-animation.element-show {
+  transform: translateY(0);
 }
 
 .accordion__name {
@@ -728,6 +746,24 @@ dd {
   display: block;
   flex: 0 0 auto;
   position: relative;
+}
+.frame5-gallery .items .item.anim1.element-animation {
+  transform: translateX(-100px);
+}
+.frame5-gallery .items .item.anim1.element-animation.element-show {
+  transform: translateX(0);
+}
+.frame5-gallery .items .item.anim2.element-animation {
+  transform: translateY(60px);
+}
+.frame5-gallery .items .item.anim2.element-animation.element-show {
+  transform: translateX(0);
+}
+.frame5-gallery .items .item.anim3.element-animation {
+  transform: translateX(100px);
+}
+.frame5-gallery .items .item.anim3.element-animation.element-show {
+  transform: translateX(0);
 }
 .frame5-gallery .items .item a {
   display: block;
@@ -1038,3 +1074,11 @@ dd {
 }
 /* </> MEDIA BOTTOM */
 /* </> BOTTOM */
+/* show when scroll */
+.element-animation {
+  opacity: 0;
+}
+.element-animation.element-show {
+  opacity: 1;
+  transition: opacity 1s, transform 1s;
+}

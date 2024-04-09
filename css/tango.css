@@ -542,6 +542,10 @@ body {
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
+  transform: translateY(60px);
+}
+.frame4__items.element-animation.element-show {
+  transform: translateY(0px);
 }
 .frame4__item {
   color: #fff;
@@ -604,6 +608,12 @@ body {
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
+}
+.frame5__items.element-animation {
+  transform: translateX(60px);
+}
+.frame5__items.element-animation.element-show {
+  transform: translateX(0);
 }
 .frame5__item {
   max-width: 350px;
@@ -733,14 +743,14 @@ body {
   font-family: "Montserrat";
   font-weight: 700;
   color: #fff;
-  margin: 20px 0 40px 0;
+  margin: 30px 0 40px 0;
   position: relative;
 }
 .frame7__agree::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -14px;
+  bottom: -20px;
   display: block;
   width: 100%;
   height: 4px;

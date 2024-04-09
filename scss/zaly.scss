@@ -458,7 +458,12 @@ body {
     width: 100%;
     color: #fff;
     padding-bottom: 30px;
-
+    &__infobox.element-animation {
+        transform: translateX(-100px);
+        &.element-show {
+            transform: translateX(0);
+        }
+    }
     &__title {
         font-size: 20px;
         font-family: "Montserrat";
@@ -491,6 +496,12 @@ body {
         min-width: 0;
         max-width: 760px;
         padding: 0 15px;
+        &.element-animation {
+            transform: translateX(100px);
+            &.element-show {
+                transform: translateX(0);
+            }
+        }
 
         & .slider {
             min-width: 0;
@@ -618,6 +629,12 @@ body {
         padding-left: 15px;
         width: 100%;
         max-width: 650px;
+        &.element-animation {
+            transform: translateY(60px);
+            &.element-show {
+                transform: translateY(0);
+            }
+        }
     }
 
 }
@@ -734,6 +751,24 @@ dd {
             display: block;
             flex: 0 0 auto;
             position: relative;
+            &.anim1.element-animation {
+                transform: translateX(-100px);
+                &.element-show {
+                    transform: translateX(0);
+                }
+            }
+            &.anim2.element-animation {
+                transform: translateY(60px);
+                &.element-show {
+                    transform: translateX(0);
+                }
+            }
+            &.anim3.element-animation {
+                transform: translateX(100px);
+                &.element-show {
+                    transform: translateX(0);
+                }
+            }
 
             & a {
                 display: block;
@@ -1122,3 +1157,12 @@ dd {
 
 /* </> MEDIA BOTTOM */
 /* </> BOTTOM */
+
+/* show when scroll */
+.element-animation {
+    opacity: 0;
+    &.element-show {
+        opacity: 1;
+        transition: opacity 1s, transform 1s;
+    }
+}
