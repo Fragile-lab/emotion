@@ -786,6 +786,76 @@ body {
   line-height: 1.6;
 }
 
+.frame8 {
+  margin-top: 60px;
+}
+.frame8__title {
+  text-align: center;
+  font-size: 28px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #e53935;
+  padding-bottom: 30px;
+}
+.frame8 ol {
+  list-style-type: none;
+}
+
+.subject__title {
+  font-family: "Montserrat";
+  font-size: 21px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 30px;
+}
+.subject__title p {
+  display: inline-block;
+}
+.subject__info {
+  padding-left: 50px;
+  margin-top: 5px;
+  line-height: 1.6;
+  color: #e53935;
+}
+.subject__info-white {
+  color: #fff;
+  margin-top: 5px;
+}
+.subject__info__dots {
+  padding-left: 30px;
+}
+.subject__dots {
+  color: #e53935;
+  padding-left: 80px;
+  margin-top: 20px;
+}
+.subject__dots li {
+  position: relative;
+  line-height: 1.6;
+}
+.subject__dots li p {
+  margin-left: 20px;
+  font-size: 14px;
+  font-family: "Open-Sans";
+  font-weight: 400;
+}
+.subject__dots li p::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 8.195px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.far, .fa {
+  display: inline;
+  padding-right: 30px;
+}
+
 /* <> MEDIA MIDDLE */
 @media (max-width: 1200px) {
   .content {
