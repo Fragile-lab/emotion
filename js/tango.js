@@ -17,11 +17,7 @@ for (let elm of elements) {
 }
 //sider
 $(document).ready(function () {
-  $('.form__input').focus(function (e) {
-    $('.form__inputbox').addClass('active');
-  });
-
-
+  
   $('.frame3 .slider').slick({
     arrows: false,
     dots: false,

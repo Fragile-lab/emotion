@@ -473,10 +473,15 @@ body {
     }
     &__item {
         color: #fff;
-        max-width: 275px;
-        padding: 0 10px;
+        max-width: 255px;
         font-size: 14px;
         text-transform: uppercase;
+        &:nth-child(2) {
+            margin: 0 20px;
+        }
+        &:nth-child(4) {
+            margin-left: 20px;
+        }
         & img {
             width: 100%;
         }
@@ -495,60 +500,145 @@ body {
         }
     }
 }
-.frame5 {}
-
-.layout { // toggle open, body overflow hidden, margins, more inputs, create api, fix js
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000a1;
-    z-index: 6;
-    display: flex;
-    justify-content: right;
+.frame5 {
+    margin-top: 80px;
+    text-align: center;
     color: #fff;
-}
-.form {
-    max-width: 510px;
-    padding: 15px 31px;
     &__title {
-        text-align: center;
-        font-size: 24px;
-        font-weight: 800;
-    }
-    &__text {
-        font-size: 15px;
-    }
-    &__inputbox {
+        display: inline-block;
+        font-size: 27px;
+        font-family: "Montserrat";
+        font-weight: 700;
         position: relative;
+        letter-spacing: 1px;
         &::after {
-            pointer-events: none;
-            content: 'Имя';
+            content: '';
             position: absolute;
-            font-size: 16px;
-            top: calc(50% - 8px);
-            left: 20px;
-        }
-        &.active::after {
-            transform:translateY(-10px);
+            left: 0;
+            bottom: -10px;
+            width: 100%;
+            height: 4px;
+            background-color: #e53935;
         }
     }
-    &__input {
-        width: 100%;
-        height: 52px;
-        padding: 20px 10px 5px 19px;
-        border-radius: 4px;
-        background-color: #E74C3C;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 500;
-        &:focus {
+    &__info {
+        margin-top: 40px;
+        font-size: 14px;
+        line-height: 1.6;
+        letter-spacing: 3px;
+        
+    }
+    &__items {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        max-width: 350px;
+        background-color: #1D1D1D;
+        padding-bottom: 40px;
+        & img {
+            width: 100%;
+        }
+        &:nth-child(2) {
+            margin: 0 15px;
+        }
+        &-title {
+            font-size: 15px;
+            font-family: "Montserrat";
+            margin-top: 60px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            padding: 0 5px;
+            & br {
+                display: none;
+            }
+        }
+        &-info {
+            font-size: 14px;
+            color: #777777;
+            margin-top: 15px;
+            letter-spacing: 3px;
+        }
+        &-price {
+            font-size: 26px;
+            font-weight: 800;
+            margin-top: 30px;
+            letter-spacing: 4px;
+        }
+        &-square {
+            margin: 40px auto 0 auto;
+            display: block;
+            width: 18px;
+            height: 27px;
             background-color: inherit;
             border: 1px solid #fff;
         }
     }
 }
+
+.frame6 {
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+    &__daybox {
+        width: 33.3333%;
+        color: #fff;
+        &-title {
+            padding: 30px 30px 0 30px;
+            font-size: 24.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: "Montserrat";
+        }
+        &-text {
+            line-height: 1.6;
+            color: #cccccc;
+            font-size: 14px;
+            margin-top: 20px;
+            padding: 0 30px 160px 30px;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+    &__promobox {
+        width: 33.3333%;
+        background-color: #000;
+        text-align: center;
+        font-family: "Montserrat";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-title {
+            font-size: 55px;
+            font-weight: 700;
+            color: #E74C3A;
+            letter-spacing: 1px;
+        }
+        &-text {
+            margin-top: 30px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: 700;
+        }
+        &-redline {
+            display: block;
+            margin: 30px auto 0 auto;
+            width: 70px;
+            height: 10px;
+            background-color: #E74C3A;
+        }
+        &-whline {
+            display: block;
+            margin: 60px auto 0 auto;
+            width: 270px;
+            height: 1px;
+            background-color: #fff;
+        }
+    }
+}
+
 
 /* <> MEDIA MIDDLE */
 @media (max-width: 1200px) {
@@ -571,6 +661,37 @@ body {
             }
         }
 
+    }
+}
+@media (max-width: 990px) {
+    .frame6 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: "promo promo" "content1 content2";
+        &__promobox {
+            padding: 30px;
+            grid-area: promo;
+            width: 100%;
+        }
+        &__daybox {
+            width: 100%;
+            & .content-1 {
+                grid-area: content1;
+            }
+            & .content-2 {
+                grid-area: content2;
+            }
+        }
+        &__daybox-text {
+            padding-bottom: 120px;
+        }
+    }
+}
+
+@media (max-width: 870px) {
+    .frame5__item-title br {
+        display: inline;
     }
 }
 /* </> MEDIA MIDDLE */
@@ -596,10 +717,34 @@ body {
     }
     .frame4__item {
         max-width: 510px;
-        margin: 0 auto 40px auto;
-        padding: 0;
+        &:nth-child(n) {
+        margin: 0 auto 40px auto;;
+        }
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+    .frame5__items {
+        display: block;
+    }
+    .frame5__item {
+        max-width: 510px;
+        &:nth-child(n) {
+            margin: 0 auto 25px auto;
+        }
+        &:nth-last-child(1) {
+            margin: 0 auto;
+        }
+    }
+    .frame6 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "promo" "content1" "content2";
+        &__daybox.content-1 &__daybox-text {
+            padding-bottom: 120px;
+        }
+        &__daybox.content-2 &__daybox-text {
+            padding-bottom: 30px;
         }
     }
 }
