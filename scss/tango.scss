@@ -58,6 +58,9 @@ body {
 .identif {
     font-size: 0;
     opacity: 0;
+    position: absolute;
+    left: 0;
+    top: -100px;
 }
 
 /* <> TOP */
@@ -477,6 +480,7 @@ body {
     margin-top: 60px;
     font-family: "Open-Sans";
     text-align: center;
+    position: relative;
 
     &__title {
         font-size: 28px;
@@ -532,7 +536,7 @@ body {
     margin-top: 100px;
     text-align: center;
     color: #fff;
-
+    position: relative;
     &__title {
         display: inline-block;
         font-size: 27px;
@@ -641,12 +645,6 @@ body {
             font-size: 14px;
             margin-top: 20px;
             padding: 0 30px 160px 30px;
-
-            & .identif {
-                position: absolute;
-                right: 0;
-                bottom: 80px;
-            }
         }
 
         & img {
@@ -698,6 +696,7 @@ body {
 .frame7 {
     padding: 0 60px;
     margin: 30px auto 0 auto;
+    position: relative;
 
     &__title {
         font-size: 28px;
@@ -768,11 +767,6 @@ body {
 .frame8 {
     margin-top: 60px;
     position: relative;
-    & .identif {
-        position: absolute;
-        top: -100px;
-        left: 0;
-    }
 
     &__title {
         text-align: center;
@@ -1042,6 +1036,19 @@ body {
     display: inline-block;
     padding-right: 30px;
 }
+
+.layout {
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000075;
+    display: block;
+}
+
+
 
 /* <> MEDIA MIDDLE */
 @media (max-width: 1200px) {
