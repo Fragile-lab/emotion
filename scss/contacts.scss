@@ -455,7 +455,6 @@ body {
                 color: #fff !important;
                 font-weight: 700;
                 line-height: 2;
-
                 & span {
                     color: #fff !important;
                 }
@@ -479,11 +478,9 @@ body {
         &.item-2 {
             padding: 50px 20px;
         }
-
         & h2 {
             font-size: 14px !important;
         }
-
         & p {
             font-size: 18px !important;
             line-height: 1.8 !important;
@@ -513,18 +510,15 @@ body {
         }
     }
 }
-
 @media (max-width: 550px) {
     .frame4__item {
         &.item-2 {
             padding: 20px;
             margin-bottom: 20px;
         }
-
         & h2 {
             font-size: 12px !important;
         }
-
         & p {
             font-size: 16px !important;
             line-height: 1.8 !important;
@@ -532,7 +526,6 @@ body {
 
     }
 }
-
 @media (max-width: 480px) {
     .frame4__item {
         padding: 20px 0 !important;
@@ -670,20 +663,18 @@ body {
         }
     }
 }
-
 @media (min-width: 2000px) {
-    .frame4 {
-        margin-top: 60px;
-        padding: 0 15px;
+.frame4 {
+    margin-top: 60px;
+    padding: 0 15px;
+
 
         &.item-2 {
             & p {
                 color: #fff !important;
-
                 & span {
                     color: #fff !important;
                 }
             }
         }
-    }
-}
+    }}
