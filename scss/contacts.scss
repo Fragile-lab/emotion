@@ -663,3 +663,18 @@ body {
         }
     }
 }
+
+.frame4 {
+    margin-top: 60px;
+    padding: 0 15px;
+
+
+        &.item-2 {
+            & p {
+                color: #fff !important;
+                & span {
+                    color: #fff !important;
+                }
+            }
+        }
+    }
