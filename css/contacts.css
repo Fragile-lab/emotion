@@ -492,12 +492,8 @@ body {
 .frame4__item.item-2 p {
   margin-top: 15px;
   font-size: 23px;
-  color: #fff !important;
   font-weight: 700;
   line-height: 2;
-}
-.frame4__item.item-2 p span {
-  color: #fff !important;
 }
 
 .far,
@@ -651,17 +647,5 @@ body {
   .element-animation.element-show {
     opacity: 1;
     transition: opacity 1s, transform 1s;
-  }
-}
-@media (min-width: 2000px) {
-  .frame4 {
-    margin-top: 60px;
-    padding: 0 15px;
-  }
-  .frame4.item-2 p {
-    color: #fff !important;
-  }
-  .frame4.item-2 p span {
-    color: #fff !important;
   }
 }
